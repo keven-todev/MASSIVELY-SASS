@@ -1,0 +1,37 @@
+
+$main : #03befc;
+
+$white : #fff;
+$white05 : rgba($white, .05);
+$white10 : rgba($white, .1);
+$white20 : rgba($white, .2);
+$white80 : rgba($white, .8);
+
+$black : #222;
+$line : #ccc;
+$footerLine : #aaa;
+$footer : #555;
+
+@mixin button (
+$borderSize : 1px, 
+$color : $white, 
+$paddingV: 0.5rem,  
+$paddingH: 1.5rem, 
+$fontSize: 1.5rem) 
+{
+  border: $borderSize solid $color;
+  text-transform: uppercase;
+  padding: $paddingV $paddingH;
+  color: $color;
+  font-family: 'SourceSans';
+  font-weight: bold;
+  display: inline-block;
+  font-size: $fontSize;
+  
+}
+
+@mixin minwidth($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
